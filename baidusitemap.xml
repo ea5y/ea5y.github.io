@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/10/16/blog1/</loc>
+    <lastmod>2016-10-16T06:28:20.905Z</lastmod>
+    <data>
+        <display>
+        <title>This is my first blog</title>
+        <pubTime>2016-10-16T06:24:00.000Z</pubTime>
+        
+        <tag>happy~</tag>
+         
+         
+           
+             
+              <breadCrumb title="Informal essay" url="http://yoursite.com/categories/Informal-essay/"/>
+          
+        </display>
+    </data>
+    </url>
+
+</urlset>
