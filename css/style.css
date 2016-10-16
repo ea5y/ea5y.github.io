@@ -135,7 +135,7 @@ a:hover {
   }
 }
 #header .alignleft h1 a {
-  font-family: FontAwesome;
+  font-family: Monaco, Menlo, Consolas, Courier New, monospace;
 }
 #header .alignleft h1 a:hover {
   color: #009cdc;
@@ -152,10 +152,10 @@ a:hover {
   margin-top: 10px;
 }
 #header .alignleft h2 a {
-  font-family: FontAwesome;
+  font-family: Monaco, Menlo, Consolas, Courier New, monospace;
 }
 #header #main-nav {
-  font-family: FontAwesome;
+  font-family: Monaco, Menlo, Consolas, Courier New, monospace;
   padding-top: 10px;
   letter-spacing: 1px;
 }
