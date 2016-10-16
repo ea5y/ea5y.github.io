@@ -135,7 +135,7 @@ a:hover {
   }
 }
 #header .alignleft h1 a {
-  font-family: Monaco, Menlo, Consolas, Courier New, monospace;
+  font-family: FontAwesome;
 }
 #header .alignleft h1 a:hover {
   color: #009cdc;
@@ -152,10 +152,10 @@ a:hover {
   margin-top: 10px;
 }
 #header .alignleft h2 a {
-  font-family: Monaco, Menlo, Consolas, Courier New, monospace;
+  font-family: FontAwesome;
 }
 #header #main-nav {
-  font-family: Monaco, Menlo, Consolas, Courier New, monospace;
+  font-family: FontAwesome;
   padding-top: 10px;
   letter-spacing: 1px;
 }
@@ -977,7 +977,7 @@ article footer .article-nav .article-next {
 }
 #footer .alignleft {
   padding-top: 22px;
-  font-family: Monaco, Menlo, Consolas, Courier New, monospace;
+  font-family: FontAwesome;
 }
 #footer .alignright {
   padding: 15px 0;
