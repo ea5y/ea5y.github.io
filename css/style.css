@@ -142,7 +142,7 @@ a:hover {
 }
 @media screen and (max-width: 992px) {
   #header .alignleft h1 a {
-    color: #000;
+    color: #666;
   }
 }
 #header .alignleft h2 {
