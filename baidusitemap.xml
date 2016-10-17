@@ -5,14 +5,27 @@
     
   <url>
     <loc>https://ea5y.github.io/2016/10/17/C%20Sharp/How%20to%20use%20the%20generic%20paradigm%20of%20EventHandler/</loc>
-    <lastmod>2016-10-17T14:57:30.319Z</lastmod>
+    <lastmod>2016-10-17T14:58:28.111Z</lastmod>
     <data>
         <display>
-        <title></title>
-        <pubTime>2016-10-17T14:50:53.939Z</pubTime>
+        <title>How to use the generic paradigm of EventHandler</title>
+        <pubTime>2016-10-17T14:44:00.000Z</pubTime>
         
+        <tag>EventHandler&lt;T&gt;</tag>
+         
+        <tag>C#</tag>
+         
+        <tag>generic paradigm</tag>
+         
+        <tag>Event</tag>
+         
+        <tag>delegate</tag>
+         
          
            
+             
+              <breadCrumb title="C Sharp" url="https://ea5y.github.io/categories/C-Sharp/"/>
+          
         </display>
     </data>
     </url>

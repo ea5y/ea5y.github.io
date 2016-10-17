@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Blog</title>
+  <title>How to use the generic paradigm of EventHandler | Blog</title>
   <meta name="author" content="ea5y">
   
   <meta name="description" content="So, i can say &quot;That&#39;s easy.&quot;">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="How to use the generic paradigm of EventHandler"/>
   <meta property="og:site_name" content="Blog"/>
 
   
@@ -99,11 +99,11 @@ body{ -webkit-animation: bugfix infinite 1s; }
   	<div class="inner">
       <div class="padding">
     		
-          <h1></h1>
+          <h1>How to use the generic paradigm of EventHandler</h1>
           <ul>
             <li>
               <span class="heading-span">Posted on: </span>
-              <time datetime="2016-10-17T14:50:53.939Z">2016-10-17</time>
+              <time datetime="2016-10-17T14:44:00.000Z">2016-10-17</time>
             </li>
             
               <li>
@@ -136,14 +136,45 @@ body{ -webkit-animation: bugfix infinite 1s; }
       
       <div class="entry">
         
-          <p>title: How to use the generic paradigm of EventHandler<br>date: 2016-10-17 22:44<br>update: 2016-10-17 22:44<br>comments: true<br>tags: [EventHandler<t>,C#,generic paradigm,Event,delegate]<br>categories: C Sharp<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line">using System;</div><div class="line">using System.Collections.Generic;</div><div class="line"></div><div class="line">public class MyEventArgs : EventArgs</div><div class="line">&#123;</div><div class="line">    private string msg;</div><div class="line"></div><div class="line">    public MyEventArgs( string messageData ) &#123;</div><div class="line">        msg = messageData;</div><div class="line">    &#125;</div><div class="line">    public string Message &#123; </div><div class="line">        get &#123; return msg; &#125; </div><div class="line">        set &#123; msg = value; &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public class HasEvent</div><div class="line">&#123;</div><div class="line">// Declare an event of delegate type EventHandler of </div><div class="line">// MyEventArgs.</div><div class="line"></div><div class="line">    public event EventHandler&lt;MyEventArgs&gt; SampleEvent;</div><div class="line"></div><div class="line">    public void DemoEvent(string val)</div><div class="line">    &#123;</div><div class="line">    // Copy to a temporary variable to be thread-safe.</div><div class="line">        EventHandler&lt;MyEventArgs&gt; temp = SampleEvent;</div><div class="line">        if (temp != null)</div><div class="line">            temp(this, new MyEventArgs(val));</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public class Sample</div><div class="line">&#123;</div><div class="line">    public static void Main()</div><div class="line">    &#123;</div><div class="line">        HasEvent he = new HasEvent();</div><div class="line">        he.SampleEvent += </div><div class="line">                   new EventHandler&lt;MyEventArgs&gt;(SampleEventHandler);</div><div class="line">        he.DemoEvent(&quot;Hey there, Bruce!&quot;);</div><div class="line">        he.DemoEvent(&quot;How are you today?&quot;);</div><div class="line">        he.DemoEvent(&quot;I&apos;m pretty good.&quot;);</div><div class="line">        he.DemoEvent(&quot;Thanks for asking!&quot;);</div><div class="line">    &#125;</div><div class="line">    private static void SampleEventHandler(object src, MyEventArgs mea)</div><div class="line">    &#123;</div><div class="line">        Console.WriteLine(mea.Message);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></t></p>
+          <p>`<br>using System;<br>using System.Collections.Generic;</p>
+<p>public class MyEventArgs : EventArgs<br>{<br>    private string msg;</p>
+<pre><code>public MyEventArgs( string messageData ) {
+    msg = messageData;
+}
+public string Message { 
+    get { return msg; } 
+    set { msg = value; }
+}
+</code></pre><p>}</p>
+<p>public class HasEvent<br>{<br>// Declare an event of delegate type EventHandler of<br>// MyEventArgs.</p>
+<pre><code>public event EventHandler&lt;MyEventArgs&gt; SampleEvent;
+
+public void DemoEvent(string val)
+{
+// Copy to a temporary variable to be thread-safe.
+    EventHandler&lt;MyEventArgs&gt; temp = SampleEvent;
+    if (temp != null)
+        temp(this, new MyEventArgs(val));
+}
+</code></pre><p>}</p>
+<p>public class Sample<br>{<br>    public static void Main()<br>    {<br>        HasEvent he = new HasEvent();<br>        he.SampleEvent +=<br>                   new EventHandler<myeventargs>(SampleEventHandler);<br>        he.DemoEvent(“Hey there, Bruce!”);<br>        he.DemoEvent(“How are you today?”);<br>        he.DemoEvent(“I’m pretty good.”);<br>        he.DemoEvent(“Thanks for asking!”);<br>    }<br>    private static void SampleEventHandler(object src, MyEventArgs mea)<br>    {<br>        Console.WriteLine(mea.Message);<br>    }<br>}<br>`</myeventargs></p>
 
         
       </div>
       <footer>
         
           
+  
+  <div class="categories">
+    <a href="/categories/C-Sharp/">C Sharp</a>
+  </div>
+
           
+  
+  <div class="tags">
+    <a href="/tags/EventHandler-T/">EventHandler<T></a>, <a href="/tags/C/">C#</a>, <a href="/tags/generic-paradigm/">generic paradigm</a>, <a href="/tags/Event/">Event</a>, <a href="/tags/delegate/">delegate</a>
+  </div>
+
           <div class="share">
   
 
@@ -237,7 +268,7 @@ body{ -webkit-animation: bugfix infinite 1s; }
   <ul class="entry">
     
       <li>
-        <a href="/2016/10/17/C Sharp/How to use the generic paradigm of EventHandler/"></a>
+        <a href="/2016/10/17/C Sharp/How to use the generic paradigm of EventHandler/">How to use the generic paradigm of EventHandler</a>
       </li>
     
       <li>
@@ -253,7 +284,7 @@ body{ -webkit-animation: bugfix infinite 1s; }
   <h3 class="title">Categories</h3>
   <ul class="entry">
   
-    <li><a href="/categories/C-Sharp/">C Sharp</a><small>0</small></li>
+    <li><a href="/categories/C-Sharp/">C Sharp</a><small>1</small></li>
   
     <li><a href="/categories/Informal-essay/">Informal essay</a><small>1</small></li>
   
@@ -265,15 +296,15 @@ body{ -webkit-animation: bugfix infinite 1s; }
 <div class="widget tag">
   <h3 class="title">Tags</h3>
   
-    <a href="/tags/C/">C#<small>0</small></a>
+    <a href="/tags/C/">C#<small>1</small></a>
   
-    <a href="/tags/Event/">Event<small>0</small></a>
+    <a href="/tags/Event/">Event<small>1</small></a>
   
-    <a href="/tags/EventHandler-T/">EventHandler&lt;T&gt;<small>0</small></a>
+    <a href="/tags/EventHandler-T/">EventHandler&lt;T&gt;<small>1</small></a>
   
-    <a href="/tags/delegate/">delegate<small>0</small></a>
+    <a href="/tags/delegate/">delegate<small>1</small></a>
   
-    <a href="/tags/generic-paradigm/">generic paradigm<small>0</small></a>
+    <a href="/tags/generic-paradigm/">generic paradigm<small>1</small></a>
   
     <a href="/tags/happy/">happy~<small>1</small></a>
   
