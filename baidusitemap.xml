@@ -5,10 +5,10 @@
     
   <url>
     <loc>https://ea5y.github.io/2016/10/17/C%20Sharp/How%20to%20use%20the%20generic%20paradigm%20of%20EventHandler/</loc>
-    <lastmod>2016-10-17T14:59:59.635Z</lastmod>
+    <lastmod>2016-10-17T16:18:21.443Z</lastmod>
     <data>
         <display>
-        <title>How to use the generic paradigm of EventHandler</title>
+        <title>How to use the EventHandler<T></title>
         <pubTime>2016-10-17T14:44:00.000Z</pubTime>
         
         <tag>EventHandler&lt;T&gt;</tag>
