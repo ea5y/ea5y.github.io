@@ -99,7 +99,7 @@ body{ -webkit-animation: bugfix infinite 1s; }
   	<div class="inner">
       <div class="padding">
     		
-          <h2>public class Fiber �� IFiberWait{ private readonly IEnumerator fiber;public bool IsFinished{ get { return !(this.IsWait); } }public bool IsError{ get; private set; }public bool IsWait{ get; private set; }public Fiber(IEnumerator fiber){this.fiber = fiber;this.IsWait = true;this.IsError = false;}public bool Update(){IFiberWait wait = this.fiber.Current as IFiberWait;if(wait != null &amp;&amp; wait.IsWait){this.IsWait  = true;}else{try{this.IsWait  = this.fiber.MoveNext();}catch(System.Exception e{BugReportController.SaveLogFile(e.ToString());IsError = true;this.IsWait  = false;}}return this.IsWait ;}}</h2>
+          <h2>main(){\n}</h2>
         
       </div>
   	</div>
