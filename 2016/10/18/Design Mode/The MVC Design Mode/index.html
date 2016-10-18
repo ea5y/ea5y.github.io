@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2016/10 | Blog</title>
+  <title>MVC Design Mode | Blog</title>
   <meta name="author" content="ea5y">
   
   <meta name="description" content="So, i can say &quot;That&#39;s easy.&quot;">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="MVC Design Mode"/>
   <meta property="og:site_name" content="Blog"/>
 
   
@@ -99,25 +99,7 @@ body{ -webkit-animation: bugfix infinite 1s; }
   	<div class="inner">
       <div class="padding">
     		
-          <h2>main(){&lt;br&gt;}</h2>
-        
-      </div>
-  	</div>
-  </div>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper" class="padding">
-<h2 class="archive-title">2016/10</h2>
-
-
-  <div class="archive">
-    
-      <article class="post">
-        <div class="post-content-index">
-        <header>
-          <div class="icon"></div>
-            
-              <h1 class="title transition"><a href="/2016/10/18/Design Mode/The MVC Design Mode/" target="_blank">MVC Design Mode</a></h1>
-            
+          <h1>MVC Design Mode</h1>
           <ul>
             <li>
               <span class="heading-span">Posted on: </span>
@@ -136,83 +118,140 @@ body{ -webkit-animation: bugfix infinite 1s; }
             <li>
               <span class="heading-span">With: </span>
               
-                <a href="/2016/10/18/Design Mode/The MVC Design Mode/#disqus_thread">Comments</a>
+                <a href="#disqus_thread">Comments</a>
 
               
-          </ul>
-        </header>
-      </article>
-    
-      <article class="post">
-        <div class="post-content-index">
-        <header>
-          <div class="icon"></div>
-            
-              <h1 class="title transition"><a href="/2016/10/17/C Sharp/How to use the generic paradigm of EventHandler/" target="_blank">How to use the EventHandler&lt;T&gt;</a></h1>
-            
-          <ul>
-            <li>
-              <span class="heading-span">Posted on: </span>
-              <time datetime="2016-10-17T14:44:00.000Z">2016-10-17</time>
             </li>
-            
-              <li>
-                <span class="heading-span">By: </span>
-
-                
-                  <a href="/">ea5y</a>
-                
-
-              </li>
-            
-            <li>
-              <span class="heading-span">With: </span>
-              
-                <a href="/2016/10/17/C Sharp/How to use the generic paradigm of EventHandler/#disqus_thread">Comments</a>
-
-              
           </ul>
-        </header>
-      </article>
-    
-      <article class="post">
-        <div class="post-content-index">
-        <header>
-          <div class="icon"></div>
-            
-              <h1 class="title transition"><a href="/2016/10/16/Informal essay/blog1/" target="_blank">This is my first blog</a></h1>
-            
-          <ul>
-            <li>
-              <span class="heading-span">Posted on: </span>
-              <time datetime="2016-10-16T06:24:00.000Z">2016-10-16</time>
-            </li>
-            
-              <li>
-                <span class="heading-span">By: </span>
+        
+      </div>
+  	</div>
+  </div>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper" class="padding"><article class="post">
+  
+  
+    <div class="post-content">
+  
+      
+      <div class="entry">
+        
+          <pre><code>this is my first time meet the MVC in the project.before then,i have leran the design mode.even so,i has not learn the soul of the design mode.perhaps,i don&apos;t know the interface.this time,i not only understand the MVC,but also know what is the interface,and how to use the interface.
+because this blog is about the design mode,i will not say the interface.but i will write it in another blog. 
+first,when we write the logic code about project&apos;s UI.we will write something about the view and change the display of view.if we want to change it,should get the data.so we do three things:
+1.display view.
+2.get data.
+3.change the display of view.
 
-                
-                  <a href="/">ea5y</a>
-                
+#View
+now real charactor appearances, i can write a class about view who responsibles for two things:
+1.display the view.
+2.given the interface about how to change the view.
+so we get the two: View.cs,IView.cs   (Ps:i will use the c sharp to description.)
 
-              </li>
-            
-            <li>
-              <span class="heading-span">With: </span>
-              
-                <a href="/2016/10/16/Informal essay/blog1/#disqus_thread">Comments</a>
-
-              
-          </ul>
-        </header>
-      </article>
-    
+#Model
+then,i can write the second class about model who responsibles for three things:
+1.change the data.
+2.get the data.
+3.given the interface bout how to get and change the model.
+4.in there,i can add a observer to monitor the change of model.when the data in model is changed,he will send a event message,if somewhere accept the message,then can call the function who was registed.
+so we get two too: Model.cs,IModel.cs
+Model.cs:     
+</code></pre>
+        
+      </div>
+      <footer>
+        
+          
+  
+  <div class="categories">
+    <a href="/categories/Design-Mode/">Design Mode</a>
   </div>
 
+          
+  
+  <div class="tags">
+    <a href="/tags/C/">C#</a>, <a href="/tags/MVC/">MVC</a>, <a href="/tags/Design-Mode/">Design Mode</a>, <a href="/tags/Unity/">Unity</a>
+  </div>
+
+          <div class="share">
+  
+
+    
+
+    
+      <div class="g-plusone"></div>
+
+      <script type="text/javascript">
+        window.___gcfg = {lang: 'en-GB'};
+
+        (function() {
+          var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+          po.src = 'https://apis.google.com/js/platform.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+      </script>
+    
+
+    
+      <a href="https://twitter.com/share" class="twitter-share-button" data-via="halfer53">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    
+  
+</div>
+          
+<nav class="article-nav clearfix">
+ 
+
+<div class="article-next">
+<a href="/2016/10/17/C Sharp/How to use the generic paradigm of EventHandler/"  title="How to use the EventHandler&lt;T&gt;">
+ <span>How to use the EventHandler&lt;T&gt;
+</span>
+<i class="fa fa-long-arrow-right"></i>
+</a>
+</div>
+
+</nav>
+
+        
+        <div class="clearfix"></div>
+      </footer>
+    </div>
+</article>
 
 
+<section id="comment">
+  <h2 class="title">Comments</h2>
 
-   </div></div>
+  
+
+  <div id="disqus_thread"></div>
+    <script>
+
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//ea5y.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  
+</section>
+
+
+</div></div>
     <aside id="sidebar" class="alignright"><div class="padding">
 	
 	  <div class="search">
