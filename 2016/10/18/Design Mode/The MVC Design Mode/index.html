@@ -136,9 +136,21 @@ body{ -webkit-animation: bugfix infinite 1s; }
       
       <div class="entry">
         
-          <p>  this is my first time meet the MVC in the project.before then,i have<br>leran the design mode.even so,i has not learn the soul of the design mode.<br>perhaps,i don’t know the interface.this time,i not only understand the MVC,<br>but also know what is the interface,and how to use the interface.<br>  because this blog is about the design mode,i will not say the interface.<br>but i will write it in another blog.<br>  first,when we write the logic code about project’s UI.we will write some<br>thing about the view and change the display of view.if we want to change it,<br>should get the data.so we do three things:<br>    1.display view.<br>    2.get data.<br>    3.change the display of view.</p>
-<h3 id="View"><a href="#View" class="headerlink" title="View"></a>View</h3><p>  now real charactor appearances, i can write a class about view who<br>responsibles for two things:<br>    1.display the view.<br>    2.given the interface about how to change the view.<br>  so we get the two: View.cs,IView.cs   (Ps:i will use the c sharp to<br>description.)</p>
-<h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><p>  then,i can write the second class about model who responsibles for three<br>things:<br>    1.change the data.<br>    2.get the data.<br>    3.given the interface bout how to get and change the model.<br>    4.in there,i can add a observer to monitor the change of model.when<br>the data in model is changed,he will send a event message,if somewhere<br>accept the message,then can call the function who was registed.<br>  so we get two too: Model.cs,IModel.cs<br>  Model.cs:     </p>
+          <pre><code>this is my first time meet the MVC in the project.before then,i have
+</code></pre><p>leran the design mode.even so,i has not learn the soul of the design mode.<br>perhaps,i don’t know the interface.this time,i not only understand the MVC,<br>but also know what is the interface,and how to use the interface.<br>    because this blog is about the design mode,i will not say the interface.<br>but i will write it in another blog.<br>    first,when we write the logic code about project’s UI.we will write some<br>thing about the view and change the display of view.if we want to change it,<br>should get the data.so we do three things:</p>
+<pre><code>1. display view.
+2. get data.
+3. change the display of view.
+</code></pre><h3 id="View"><a href="#View" class="headerlink" title="View"></a>View</h3><p>  now real charactor appearances, i can write a class about view who<br>responsibles for two things:</p>
+<pre><code>1. display the view.
+2. given the interface about how to change the view.
+</code></pre><p>  so we get the two: View.cs,IView.cs   (Ps:i will use the c sharp to<br>description.)</p>
+<h3 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h3><p>  then,i can write the second class about model who responsibles for three<br>things:</p>
+<pre><code>1. change the data.
+2. get the data.
+3. given the interface bout how to get and change the model.
+4. in there,i can add a observer to monitor the change of model.when
+</code></pre><p>the data in model is changed,he will send a event message,if somewhere<br>accept the message,then can call the function who was registed.<br>  so we get two too: Model.cs,IModel.cs<br>  Model.cs:     </p>
 
         
       </div>
