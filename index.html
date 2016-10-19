@@ -150,16 +150,15 @@ body{ -webkit-animation: bugfix infinite 1s; }
 <pre><code>1. display view.
 2. get data.
 3. change the display of view.
-</code></pre><h3 id="View"><a href="#View" class="headerlink" title="View"></a>View</h3><p>now real charactor appearances, i can write a class about view who responsibles for two things:</p>
+</code></pre><h3 id="View"><a href="#View" class="headerlink" title="View"></a>View</h3><p><code> </code>now real charactor appearances, i can write a class about view who responsibles for two things:</p>
 <pre><code>1. display the view.
 2. given the interface about how to change the view.
-</code></pre><p>  so we get the two: View.cs,IView.cs   (Ps:i will use the c sharp to description.)</p>
-<h3 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h3><p>then,i can write the second class about model who responsibles for three things:</p>
+</code></pre><p><code> </code>so we get the two: View.cs,IView.cs   (Ps:i will use the c sharp to description.)</p>
+<h3 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h3><p><code> </code>then,i can write the second class about model who responsibles for three things:</p>
 <pre><code>1. change the data.
 2. get the data.
 3. given the interface bout how to get and change the model.
-4. in there,i can add a observer to monitor the change of model.when the data in model is changed,he will send a event message,if somewhere accept the message,then can call the function who was registed.
-</code></pre><p>  so we get two too: Model.cs,IModel.cs<br>  Model.cs:     </p>
+</code></pre><p><code>`in there,i can add a observer to monitor the change of model.when the data in model is changed,he will send a event message,if somewhere accept the message,then can call the function who was registed.</code>   `so we get two too: Model.cs,IModel.cs<br>  Model.cs:     </p>
 
           
         
