@@ -158,7 +158,13 @@ body{ -webkit-animation: bugfix infinite 1s; }
 <pre><code>1. change the data.
 2. get the data.
 3. given the interface bout how to get and change the model.
-</code></pre><p><code> </code>in there,i can add a observer to monitor the change of model.when the data in model is changed,he will send a event message,if somewhere accept the message,then can call the function who was registed.so we get two too: Model.cs,IModel.cs<br>  Model.cs:     </p>
+</code></pre><p><code> </code>in there,i can add a observer to monitor the change of model.when the data in model is changed,he will send a event message,if somewhere accept the message,then can call the function who was registed.so we get two too: Model.cs,IModel.cs</p>
+<h3 id="Controller"><a href="#Controller" class="headerlink" title="Controller"></a>Controller</h3><p><code> </code>and there is a controller need to be done.the controller responses three things:</p>
+<pre><code>1. add view event.
+2. change model.
+3. change the display by model.
+</code></pre><p><code> </code>so we get one: Controller.cs</p>
+<p><code> </code>We’d better have a manager to controller the panel’s jump,the one who manage all panels, or manage a system of all panels.</p>
 
           
         
