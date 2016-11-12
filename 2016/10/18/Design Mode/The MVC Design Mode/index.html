@@ -1,10 +1,12 @@
 <!doctype html>
-<html class="theme-next   use-motion ">
+<html class="theme-next use-motion theme-next-mist">
 <head>
-  <meta charset="UTF-8"/>
+  
+
+<meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
+<meta property="wb:webmaster" content="bcffef689668492a" />
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
@@ -15,19 +17,18 @@
 
 
 
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
+  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
 
-
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
-
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+    <meta name="description" content="So, i can say "That's easy."" />
 
-<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="C#,MVC,Design Mode,Unity," />
@@ -36,14 +37,7 @@
 
 
 
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
-
-
-
-
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
 <meta name="description" content="this is my first time meet the MVC in the project.before then,i have leran the design mode.even so,i has not learn the soul of the design mode.perhaps,i don’t know the interface.this time,i not only">
@@ -58,12 +52,10 @@
 <meta name="twitter:description" content="this is my first time meet the MVC in the project.before then,i have leran the design mode.even so,i has not learn the soul of the design mode.perhaps,i don’t know the interface.this time,i not only">
 
 
-
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: 'hide',
-    motion: true
+    sidebar: 'post'
   };
 </script>
 
@@ -85,24 +77,20 @@
 
 
 
-
-
   <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
-
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
       <span class="site-title">Blog</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle">Debug.Log("if i have a drawback,i will show,just like as if this is a exception,should be show,")</p>
-</div>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
 
 <div class="site-nav-toggle">
   <button>
@@ -121,9 +109,7 @@
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
-            
+            <i class="menu-item-icon icon-next-home"></i> <br />
             Home
           </a>
         </li>
@@ -131,9 +117,7 @@
         
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
-            
+            <i class="menu-item-icon icon-next-categories"></i> <br />
             Categories
           </a>
         </li>
@@ -141,9 +125,7 @@
         
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
-            
+            <i class="menu-item-icon icon-next-tags"></i> <br />
             Tags
           </a>
         </li>
@@ -151,9 +133,7 @@
         
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
-            
+            <i class="menu-item-icon icon-next-archives"></i> <br />
             Archives
           </a>
         </li>
@@ -161,9 +141,7 @@
         
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
-            
+            <i class="menu-item-icon icon-next-about"></i> <br />
             About
           </a>
         </li>
@@ -182,84 +160,65 @@
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content">
-          
+        <div id="content" class="content"> 
 
   <div id="posts" class="posts-expand">
     
 
-  
-  
+  <article class="post  " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
-  
-  
-  
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              MVC Design Mode
+            
+          
+        </h1>
+      
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
+      <div class="post-meta">
+        <span class="post-time">
+          Posted on
+          <time itemprop="dateCreated" datetime="2016-10-18T21:46:00+08:00" content="2016-10-18">
+            2016-10-18
+          </time>
+        </span>
 
         
-        
-          <h1 class="post-title" itemprop="name headline">
+          <span class="post-category" >
+            &nbsp; | &nbsp; In
             
-            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/Design-Mode/" itemprop="url" rel="index">
+                  <span itemprop="name">Design Mode</span>
+                </a>
+              </span>
+
               
-                MVC Design Mode
               
-            
-          </h1>
-        
 
-        <div class="post-meta">
-          <span class="post-time">
-            Posted on
-            <time itemprop="dateCreated" datetime="2016-10-18T21:46:00+08:00" content="2016-10-18">
-              2016-10-18
-            </time>
+            
           </span>
-          <span class="post-time">
-            | 修改于
-            <time itemprop="dateCreated" datetime="2016-10-20T22:28:17+08:00" content="2016-10-20">
-              2016-10-20
-            </time>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2016/10/18/Design Mode/The MVC Design Mode/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/18/Design Mode/The MVC Design Mode/" itemprop="commentsCount"></span>
+            </a>
           </span>
-
           
-            <span class="post-category" >
-              &nbsp; | &nbsp; In
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Design-Mode/" itemprop="url" rel="index">
-                    <span itemprop="name">Design Mode</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2016/10/18/Design Mode/The MVC Design Mode/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/18/Design Mode/The MVC Design Mode/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
+        
+        
+        
+      </div>
+    </header>
 
     <div class="post-body">
 
@@ -267,7 +226,7 @@
       
 
       
-        <span itemprop="articleBody"><p><code> </code>this is my first time meet the MVC in the project.before then,i have leran the design mode.even so,i has not learn the soul of the design mode.perhaps,i don’t know the interface.this time,i not only understand the MVC, but also know what is the interface,and how to use the interface.because this blog is about the design mode,i will not say the interface.but i will write it in another blog.  first,when we write the logic code about project’s UI.we will write something about the view and change the display of view.if we want to change it,should get the data.so we do three things:</p>
+        <span itemprop="articleBody">&nbsp;&nbsp;&nbsp;&nbsp;<p><code> </code>this is my first time meet the MVC in the project.before then,i have leran the design mode.even so,i has not learn the soul of the design mode.perhaps,i don’t know the interface.this time,i not only understand the MVC, but also know what is the interface,and how to use the interface.because this blog is about the design mode,i will not say the interface.but i will write it in another blog.  first,when we write the logic code about project’s UI.we will write something about the view and change the display of view.if we want to change it,should get the data.so we do three things:</p>
 <pre><code>1. display view.
 2. get data.
 3. change the display of view.
@@ -307,15 +266,13 @@
 
       
         <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/10/17/C Sharp/How to use the generic paradigm of EventHandler/" rel="next" title="How to use the EventHandler<T>">
-                <i class="fa fa-chevron-left"></i> How to use the EventHandler<T>
-              </a>
+          <div class="post-nav-prev post-nav-item">
             
           </div>
 
-          <div class="post-nav-prev post-nav-item">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/17/C Sharp/How to use the generic paradigm of EventHandler/" rel="next">How to use the EventHandler<T></a>
             
           </div>
         </div>
@@ -333,26 +290,22 @@
     </div>
   </div>
 
-
-        </div>
-
-        
-
+ </div>
 
         
-  <div class="comments" id="comments">
-    
-      <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      </div>
-    
-  </div>
 
-
+        
+          <div class="comments" id="comments">
+            
+              <div id="disqus_thread">
+                <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+              </div>
+            
+          </div>
+        
       </div>
 
       
-        
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -366,8 +319,6 @@
     <div class="sidebar-inner">
 
       
-
-      
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
             Table Of Contents
@@ -378,7 +329,7 @@
         </ul>
       
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" src="/images/default_avatar.jpg" alt="ea5y" itemprop="image"/>
           <p class="site-author-name" itemprop="name">ea5y</p>
@@ -424,21 +375,15 @@
       </section>
 
       
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator">
-            <i class="fa fa-angle-double-up"></i>
-          </div>
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
           <div class="post-toc">
-            
-              
             
             
               <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#View"><span class="nav-number">1.</span> <span class="nav-text">View</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Model"><span class="nav-number">2.</span> <span class="nav-text">Model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Controller"><span class="nav-number">3.</span> <span class="nav-text">Controller</span></a></li></ol></div>
             
           </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator">
-            <i class="fa fa-angle-double-down"></i>
-          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
         </section>
       
 
@@ -446,17 +391,15 @@
   </aside>
 
 
-      
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
+      <div class="footer-inner"> <div class="copyright" >
   
-  &copy; 
+  &copy; &nbsp; 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="icon-next-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">ea5y</span>
 </div>
@@ -473,8 +416,7 @@
 </div>
 
 
-
-      </div>
+ </div>
     </footer>
 
     <div class="back-to-top"></div>
@@ -484,7 +426,6 @@
 
   
   
-
   
     
     
@@ -514,25 +455,28 @@
 
 
   
-
   
   <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
 
 
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
   <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
 
-<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
 
 
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
   
-<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
 
 
 <script type="text/javascript" id="sidebar.toc.highlight">
@@ -613,7 +557,7 @@
 
     function tocOverflowIndicator (indicator, action) {
       var $indicator = $(indicator);
-      var opacity = action === 'show' ? 1 : 0;
+      var opacity = action === 'show' ? 0.4 : 0;
       $indicator.velocity ?
         $indicator.velocity('stop').velocity({
           opacity: opacity
@@ -680,26 +624,42 @@
     });
 
     // Expand sidebar on post detail page by default, when post has a toc.
-    motionMiddleWares.sidebar = function () {
-      var $tocContent = $('.post-toc-content');
-      if (CONFIG.sidebar === 'post') {
-        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-          displaySidebar();
-        }
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
       }
-    };
+    }
   });
 </script>
 
 
 
-  <script type="text/javascript" src="/js/bootstrap.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
 
   
   
 
   
-  
-
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
 </body>
 </html>
