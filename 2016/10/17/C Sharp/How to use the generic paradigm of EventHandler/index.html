@@ -1,413 +1,693 @@
-<!DOCTYPE HTML>
-
-<html lang="en">
-  
+<!doctype html>
+<html class="theme-next   use-motion ">
 <head>
-  <meta charset="utf-8">
-  
-  <title>How to use the EventHandler&lt;T&gt; | Blog</title>
-  <meta name="author" content="ea5y">
-  
-  <meta name="description" content="So, i can say &quot;That&#39;s easy.&quot;">
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-  <meta property="og:title" content="How to use the EventHandler&lt;T&gt;"/>
-  <meta property="og:site_name" content="Blog"/>
 
-  
-    <meta property="og:image" content="undefined"/>
-  
 
-  
-    <meta http-equiv="Content-Language" content="en"/>
-  
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
 
-  <link href="/img/favicon.png" rel="icon">
-  
-    <link rel="apple-touch-icon" href="/img/apple-icon.png">
-    <link rel="apple-touch-icon-precomposed" href="/img/apple-icon.png">
-    
 
-  <link rel="alternate" href="/atom.xml" title="Blog" type="application/atom+xml">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  
-  <style type="text/css">
-  /* Tim Pietrusky advanced checkbox hack (Android <= 4.1.2) */
-body{ -webkit-animation: bugfix infinite 1s; }
-@-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} }
 
-  
 
-  
-    article .post-content-index .entry{max-height: 550px; overflow:hidden;}
-  
-</style>
 
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'null', 'auto');
-  ga('send', 'pageview');
- 
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="C#,EventHandler<T>,generic paradigm,Event,delegate," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="today when i saw the code about our project,i discover the EventHandler delegate.it’s so fun.we can define a customer class who inherits from EventArgs,we can do somethings about change the value in">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to use the EventHandler<T>">
+<meta property="og:url" content="https://ea5y.github.io/2016/10/17/C Sharp/How to use the generic paradigm of EventHandler/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="today when i saw the code about our project,i discover the EventHandler delegate.it’s so fun.we can define a customer class who inherits from EventArgs,we can do somethings about change the value in">
+<meta property="og:updated_time" content="2016-10-17T16:18:21.443Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to use the EventHandler<T>">
+<meta name="twitter:description" content="today when i saw the code about our project,i discover the EventHandler delegate.it’s so fun.we can define a customer class who inherits from EventArgs,we can do somethings about change the value in">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'hide',
+    motion: true
+  };
 </script>
 
-
-
-
-  
-    
-      <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400|Playball' rel='stylesheet' type='text/css'>
-    
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
-
-  
-
-
-
+  <title> How to use the EventHandler<T> | Blog </title>
 </head>
 
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
 
-<body>
-  <header id="header" class="inner"><div class="padding">
-	<div class="alignleft logo">
-	  <h1><a href="/">Blog</a></h1>
-	</div>
-	<nav id="main-nav" class="alignright">
-		<input type="checkbox" id="toggle" />
-		<label for="toggle" class="toggle" data-open="Main Menu" data-close="Close Menu" onclick><i class="fa fa-bars"></i></label>
-	  <ul class="menu">
-	    
-	      <li><a href="/">Home</a></li>
-	    
-	      <li><a href="/archives">Archives</a></li>
-	    
-	    
-	  </ul>
-	</nav>
-	<div class="clearfix"></div>
-</div>
-</header>
-  <div id="page-heading-wrap">
-  	<div class="inner">
-      <div class="padding">
-    		
-          <h1>How to use the EventHandler&lt;T&gt;</h1>
-          <ul>
-            <li>
-              <span class="heading-span">Posted on: </span>
-              <time datetime="2016-10-17T14:44:00.000Z">2016-10-17</time>
-            </li>
-            
-              <li>
-                <span class="heading-span">By: </span>
-
-                
-                  <a href="/">ea5y</a>
-                
-
-              </li>
-            
-            <li>
-              <span class="heading-span">With: </span>
-              
-                <a href="#disqus_thread">Comments</a>
-
-              
-            </li>
-          </ul>
-        
-      </div>
-  	</div>
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
   </div>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper" class="padding"><article class="post">
+<![endif]-->
   
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
   
-    <div class="post-content">
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Debug.Log("if i have a drawback,i will show,just like as if this is a exception,should be show,")</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
   
+
+  
+    <ul id="menu" class="menu ">
       
-      <div class="entry">
         
-          <p>  today when i saw the code about our project,i discover the EventHandler<t> delegate.it’s so fun.we can define a customer class who inherits from EventArgs,we can do somethings about change the value in this class.then we declare an event of delegate type EventHandler of my customer class,when my value changed will send an event message,if somewhere accept the message,will call the function that’s registed to the event.<br>  there is a quesion why my class should inherits from EventArgs?<br>  because delegate type EventHandler<t> has two params(object, EventArgs),we must send an EventArgs param.<br>  1.define a class who inherits from EventArg<br>  2.declare an event<br>  3.regist an event<br>  4.trriger the event when our value changed<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">using System;</div><div class="line">using System.Collections.Generic;</div><div class="line"></div><div class="line">public class MyEventArgs : EventArgs</div><div class="line">&#123;</div><div class="line">    private string msg;</div><div class="line"></div><div class="line">    public MyEventArgs( string messageData ) &#123;</div><div class="line">        msg = messageData;</div><div class="line">    &#125;</div><div class="line">    public string Message &#123; </div><div class="line">        get &#123; return msg; &#125; </div><div class="line">        set &#123; msg = value; &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public class HasEvent</div><div class="line">&#123;</div><div class="line">// Declare an event of delegate type EventHandler of </div><div class="line">// MyEventArgs.</div><div class="line"></div><div class="line">    public event EventHandler&lt;MyEventArgs&gt; SampleEvent;</div><div class="line"></div><div class="line">    public void DemoEvent(string val)</div><div class="line">    &#123;</div><div class="line">    // Copy to a temporary variable to be thread-safe.</div><div class="line">        EventHandler&lt;MyEventArgs&gt; temp = SampleEvent;</div><div class="line">        if (temp != null)</div><div class="line">            temp(this, new MyEventArgs(val));</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public class Sample</div><div class="line">&#123;</div><div class="line">    public static void Main()</div><div class="line">    &#123;</div><div class="line">        //declare event</div><div class="line">        HasEvent he = new HasEvent();</div><div class="line">        //regist event</div><div class="line">        he.SampleEvent += </div><div class="line">                   new EventHandler&lt;MyEventArgs&gt;(SampleEventHandler);</div><div class="line">        //value change trriger event</div><div class="line">        he.DemoEvent(&quot;Hey there, Bruce!&quot;);</div><div class="line">        he.DemoEvent(&quot;How are you today?&quot;);</div><div class="line">        he.DemoEvent(&quot;I&apos;m pretty good.&quot;);</div><div class="line">        he.DemoEvent(&quot;Thanks for asking!&quot;);</div><div class="line">    &#125;</div><div class="line">    //this function is registed </div><div class="line">    private static void SampleEventHandler(object src, MyEventArgs mea)</div><div class="line">    &#123;</div><div class="line">        Console.WriteLine(mea.Message);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></t></t></p>
-
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
         
-      </div>
-      <footer>
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-question-circle fa-fw"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
         
-          
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archives fa-fw"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
   
-  <div class="categories">
-    <a href="/categories/C-Sharp/">C Sharp</a>
-  </div>
 
-          
   
-  <div class="tags">
-    <a href="/tags/EventHandler-T/">EventHandler<T></a>, <a href="/tags/C/">C#</a>, <a href="/tags/generic-paradigm/">generic paradigm</a>, <a href="/tags/Event/">Event</a>, <a href="/tags/delegate/">delegate</a>
-  </div>
-
-          <div class="share">
-  
-
-    
-
-    
-      <div class="g-plusone"></div>
-
-      <script type="text/javascript">
-        window.___gcfg = {lang: 'en-GB'};
-
-        (function() {
-          var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-          po.src = 'https://apis.google.com/js/platform.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-        })();
-      </script>
-    
-
-    
-      <a href="https://twitter.com/share" class="twitter-share-button" data-via="halfer53">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-    
-  
-</div>
-          
-<nav class="article-nav clearfix">
- 
- <div class="article-prev" >
- <a href="/2016/10/18/Design Mode/The MVC Design Mode/" title="MVC Design Mode">
-  <i class="fa fa-long-arrow-left"></i>
-  <span>
-  MVC Design Mode</span>
-</a>
-</div>
-
-
-<div class="article-next">
-<a href="/2016/10/16/Informal essay/blog1/"  title="This is my first blog">
- <span>This is my first blog
-</span>
-<i class="fa fa-long-arrow-right"></i>
-</a>
-</div>
-
 </nav>
 
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
         
-        <div class="clearfix"></div>
-      </footer>
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                How to use the EventHandler<T>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            Posted on
+            <time itemprop="dateCreated" datetime="2016-10-17T22:44:00+08:00" content="2016-10-17">
+              2016-10-17
+            </time>
+          </span>
+          <span class="post-time">
+            | 修改于
+            <time itemprop="dateCreated" datetime="2016-10-18T00:18:21+08:00" content="2016-10-18">
+              2016-10-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; In
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/C-Sharp/" itemprop="url" rel="index">
+                    <span itemprop="name">C Sharp</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2016/10/17/C Sharp/How to use the generic paradigm of EventHandler/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/17/C Sharp/How to use the generic paradigm of EventHandler/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>  today when i saw the code about our project,i discover the EventHandler<t> delegate.it’s so fun.we can define a customer class who inherits from EventArgs,we can do somethings about change the value in this class.then we declare an event of delegate type EventHandler of my customer class,when my value changed will send an event message,if somewhere accept the message,will call the function that’s registed to the event.<br>  there is a quesion why my class should inherits from EventArgs?<br>  because delegate type EventHandler<t> has two params(object, EventArgs),we must send an EventArgs param.<br>  1.define a class who inherits from EventArg<br>  2.declare an event<br>  3.regist an event<br>  4.trriger the event when our value changed<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">using System;</div><div class="line">using System.Collections.Generic;</div><div class="line"></div><div class="line">public class MyEventArgs : EventArgs</div><div class="line">&#123;</div><div class="line">    private string msg;</div><div class="line"></div><div class="line">    public MyEventArgs( string messageData ) &#123;</div><div class="line">        msg = messageData;</div><div class="line">    &#125;</div><div class="line">    public string Message &#123; </div><div class="line">        get &#123; return msg; &#125; </div><div class="line">        set &#123; msg = value; &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public class HasEvent</div><div class="line">&#123;</div><div class="line">// Declare an event of delegate type EventHandler of </div><div class="line">// MyEventArgs.</div><div class="line"></div><div class="line">    public event EventHandler&lt;MyEventArgs&gt; SampleEvent;</div><div class="line"></div><div class="line">    public void DemoEvent(string val)</div><div class="line">    &#123;</div><div class="line">    // Copy to a temporary variable to be thread-safe.</div><div class="line">        EventHandler&lt;MyEventArgs&gt; temp = SampleEvent;</div><div class="line">        if (temp != null)</div><div class="line">            temp(this, new MyEventArgs(val));</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public class Sample</div><div class="line">&#123;</div><div class="line">    public static void Main()</div><div class="line">    &#123;</div><div class="line">        //declare event</div><div class="line">        HasEvent he = new HasEvent();</div><div class="line">        //regist event</div><div class="line">        he.SampleEvent += </div><div class="line">                   new EventHandler&lt;MyEventArgs&gt;(SampleEventHandler);</div><div class="line">        //value change trriger event</div><div class="line">        he.DemoEvent(&quot;Hey there, Bruce!&quot;);</div><div class="line">        he.DemoEvent(&quot;How are you today?&quot;);</div><div class="line">        he.DemoEvent(&quot;I&apos;m pretty good.&quot;);</div><div class="line">        he.DemoEvent(&quot;Thanks for asking!&quot;);</div><div class="line">    &#125;</div><div class="line">    //this function is registed </div><div class="line">    private static void SampleEventHandler(object src, MyEventArgs mea)</div><div class="line">    &#123;</div><div class="line">        Console.WriteLine(mea.Message);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></t></t></p>
+</span>
+      
     </div>
-</article>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/C/" rel="tag">#C#</a>
+          
+            <a href="/tags/EventHandler-T/" rel="tag">#EventHandler<T></a>
+          
+            <a href="/tags/generic-paradigm/" rel="tag">#generic paradigm</a>
+          
+            <a href="/tags/Event/" rel="tag">#Event</a>
+          
+            <a href="/tags/delegate/" rel="tag">#delegate</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/16/Informal essay/blog1/" rel="next" title="This is my first blog">
+                <i class="fa fa-chevron-left"></i> This is my first blog
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/18/Design Mode/The MVC Design Mode/" rel="prev" title="MVC Design Mode">
+                MVC Design Mode <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
 
 
-<section id="comment">
-  <h2 class="title">Comments</h2>
 
-  
-
-  <div id="disqus_thread"></div>
-    <script>
-
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = '//ea5y.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-    </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-  
-</section>
-
-
-</div></div>
-    <aside id="sidebar" class="alignright"><div class="padding">
-	
-	  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
-    <input type="hidden" name="q" value="site:ea5y.github.io">
-  </form>
-</div>
-	
-	  
-<div class="widget recent-post">
-  <h3 class="title">Recent Posts</h3>
-  <ul class="entry">
-    
-      <li>
-        <a href="/2016/10/18/Design Mode/The MVC Design Mode/">MVC Design Mode</a>
-      </li>
-    
-      <li>
-        <a href="/2016/10/17/C Sharp/How to use the generic paradigm of EventHandler/">How to use the EventHandler&lt;T&gt;</a>
-      </li>
-    
-      <li>
-        <a href="/2016/10/16/Informal essay/blog1/">This is my first blog</a>
-      </li>
-    
-  </ul>
-</div>
-
-	
-	  
-<div class="widget category">
-  <h3 class="title">Categories</h3>
-  <ul class="entry">
-  
-    <li><a href="/categories/C-Sharp/">C Sharp</a><small>1</small></li>
-  
-    <li><a href="/categories/Design-Mode/">Design Mode</a><small>1</small></li>
-  
-    <li><a href="/categories/Informal-essay/">Informal essay</a><small>1</small></li>
-  
-  </ul>
-</div>
-
-	
-	  
-<div class="widget tag">
-  <h3 class="title">Tags</h3>
-  
-    <a href="/tags/C/">C#<small>2</small></a>
-  
-    <a href="/tags/Design-Mode/">Design Mode<small>1</small></a>
-  
-    <a href="/tags/Event/">Event<small>1</small></a>
-  
-    <a href="/tags/EventHandler-T/">EventHandler&lt;T&gt;<small>1</small></a>
-  
-    <a href="/tags/MVC/">MVC<small>1</small></a>
-  
-    <a href="/tags/Unity/">Unity<small>1</small></a>
-  
-    <a href="/tags/delegate/">delegate<small>1</small></a>
-  
-    <a href="/tags/generic-paradigm/">generic paradigm<small>1</small></a>
-  
-    <a href="/tags/happy/">happy~<small>1</small></a>
-  
-</div>
-
-	
-</div></aside>
-    <div class="clearfix"></div>
+    <div class="post-spread">
+      
+    </div>
   </div>
-  <footer id="footer" class="inner"><div class="padding">
-	<div class="alignleft">
-	  
-	  &copy; 2016 ea5y
-	  
-      - A superman who can do anything 
-	</div>
 
-	<div class="alignright">
-		
-		
-			<a href="https://github.com/ea5y" target="_blank" title="ea5y Github"><i class="fa fa-github-square"></i></a>	
-		
-		
-		
-			<a href="http://www.weibo.com/2290475475" target="_blank" title="ea5y Weibo"><i class="fa fa-weibo"></i></a>	
-		
-		
-		
-		
-	</div>
 
-	<div class="clearfix"></div>
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table Of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/default_avatar.jpg" alt="ea5y" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">ea5y</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">So, i can say "That's easy."</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">categories</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">tags</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">This post does not have a Table Of Contents</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ea5y</span>
 </div>
 
-<div class="scroll-top"><i class="fa fa-arrow-circle-up"></i></div>
-</footer>
-  
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
 
-		<script type="text/javascript">
-		var disqus_shortname = 'ea5y';
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
 
-		        (function() {
-		            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-		        })();
-		</script>
 
-		<script type="text/javascript">
-		var disqus_shortname = 'ea5y'; 
 
-		(function () {
-		var s = document.createElement('script'); s.async = true;
-		s.type = 'text/javascript';
-		s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-		(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-		}());
-		</script>
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
+  
+
+  
+    
+    
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'ea5y';
+      var disqus_identifier = '2016/10/17/C Sharp/How to use the generic paradigm of EventHandler/';
+      var disqus_title = 'How to use the EventHandler<T>';
+      var disqus_url = 'https://ea5y.github.io/2016/10/17/C Sharp/How to use the generic paradigm of EventHandler/';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
 
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.js"></script>
-<script src="/js/gallery.js"></script>
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
 
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
 </script>
 
 
-<script type="text/javascript">
-$(window).scroll(function() {
 
-    if($(this).scrollTop() > 400) {
-        $('.scroll-top').fadeIn(200);
-    } else {
-        $('.scroll-top').fadeOut(200);
-    }
-});
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
 
-$('.scroll-top').bind('click', function(e) {
-    e.preventDefault();
-    $('body,html').animate({scrollTop:0},200);
-});
-</script>
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
+  
+  
+
+  
+  
 
 </body>
 </html>
