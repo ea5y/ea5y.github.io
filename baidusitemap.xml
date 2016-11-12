@@ -2,4 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 
+    
+  <url>
+    <loc>https://ea5y.github.io/2016/10/18/Design%20Mode/The%20MVC%20Design%20Mode/</loc>
+    <lastmod>2016-10-20T14:28:17.728Z</lastmod>
+    <data>
+        <display>
+        <title>MVC Design Mode</title>
+        <pubTime>2016-10-18T13:46:00.000Z</pubTime>
+        
+        <tag>C#</tag>
+         
+        <tag>MVC</tag>
+         
+        <tag>Design Mode</tag>
+         
+        <tag>Unity</tag>
+         
+         
+           
+             
+              <breadCrumb title="Design Mode" url="https://ea5y.github.io/categories/Design-Mode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://ea5y.github.io/2016/10/17/C%20Sharp/How%20to%20use%20the%20generic%20paradigm%20of%20EventHandler/</loc>
+    <lastmod>2016-10-17T16:18:21.443Z</lastmod>
+    <data>
+        <display>
+        <title>How to use the EventHandler<T></title>
+        <pubTime>2016-10-17T14:44:00.000Z</pubTime>
+        
+        <tag>EventHandler&lt;T&gt;</tag>
+         
+        <tag>C#</tag>
+         
+        <tag>generic paradigm</tag>
+         
+        <tag>Event</tag>
+         
+        <tag>delegate</tag>
+         
+         
+           
+             
+              <breadCrumb title="C Sharp" url="https://ea5y.github.io/categories/C-Sharp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://ea5y.github.io/2016/10/16/Informal%20essay/blog1/</loc>
+    <lastmod>2016-10-16T06:28:20.905Z</lastmod>
+    <data>
+        <display>
+        <title>This is my first blog</title>
+        <pubTime>2016-10-16T06:24:00.000Z</pubTime>
+        
+        <tag>happy~</tag>
+         
+         
+           
+             
+              <breadCrumb title="Informal essay" url="https://ea5y.github.io/categories/Informal-essay/"/>
+          
+        </display>
+    </data>
+    </url>
+
 </urlset>
