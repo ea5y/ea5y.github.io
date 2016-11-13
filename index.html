@@ -263,6 +263,139 @@ var _hmt = _hmt || [];
             
               
                 
+                <a class="post-title-link" href="/2016/11/13/C Sharp/IEnumerator/" itemprop="url">
+                  IEnumerator和IEnumerable 越看越懵
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-13T22:32:00+08:00" content="2016-11-13">
+              2016-11-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C#</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/13/C Sharp/IEnumerator/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/13/C Sharp/IEnumerator/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/11/13/C Sharp/IEnumerator/" class="leancloud_visitors" data-flag-title="IEnumerator和IEnumerable 越看越懵">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="IEnumerator-IEnumerable-越看越懵"><a href="#IEnumerator-IEnumerable-越看越懵" class="headerlink" title="IEnumerator IEnumerable 越看越懵"></a>IEnumerator IEnumerable 越看越懵</h3><p>刚接触IEnumerator的地方是在unity中有个叫协程的东西，基本作用就是执行这个协程函数，可以控制上一个表达式到下一个表达式之间的时间间隔，看到这里，觉得相当简单，用着也特舒服。但是，当我在项目中，看到大量的IEnumerator,然后又没有调用unity的协程的时候，我就傻逼了，不知道怎么办了。基于我目前对他的理解，我写下这篇博文，希望有大大可以给我指点指点。非常感谢。</p>
+<h4 id="枚举器"><a href="#枚举器" class="headerlink" title="枚举器"></a>枚举器</h4><p>继承IEnumerator的类就叫做枚举器。<br>它包含：<br>MoveNext()方法<br>current属性</p>
+<h4 id="可枚举类"><a href="#可枚举类" class="headerlink" title="可枚举类"></a>可枚举类</h4><p>继承IEnumerable的类就叫做可枚举类。可枚举类，都会包含一个GetEnumerator()方法，该方法会返回一个枚举器，就是上面提到的。</p>
+<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><p>枚举器和可枚举类的关系呢，好比是：一个人拿着一个计算器，就能方便的计算。可枚举类就是人，枚举器就是计算器，GetEnumerator()方法就是手，所以我们想要快速方便的进行计算，人，手，计算器，缺一不可。<br>话又说回来，为什么会有这两个东西。因为有一个foreach遍历，之所以foreach可以对数组进行遍历，就是因为数组是一个可枚举类，它通过一个GetEnumerator()方法，获得一个枚举器。枚举器有个current属性，代表当前值，有一个MoveNext()方法，用于遍历，当执行MoveNext(),current就往下走，代表下一个值，当下一个值存在的时候，MoveNext()返回true，否则返回false.</p>
+<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">1.获取枚举器</div><div class="line">IEnumerator ie = Array.GetEnumerator();</div><div class="line">2.通过ie.MoveNext()遍历</div><div class="line">while(ie.MoveNext())//返回true，表示存在</div><div class="line">&#123;</div><div class="line">    3.通过current取值</div><div class="line">    int i = (int)ie.current;//current类型为object,可转换为任何类型</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/11/13/C Sharp/接口/" itemprop="url">
                   接口
                 </a>
@@ -824,7 +957,7 @@ var _hmt = _hmt || [];
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -841,7 +974,7 @@ var _hmt = _hmt || [];
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
