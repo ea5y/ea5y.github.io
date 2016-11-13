@@ -263,6 +263,144 @@ var _hmt = _hmt || [];
             
               
                 
+                <a class="post-title-link" href="/2016/11/13/C Sharp/接口/" itemprop="url">
+                  接口
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-13T22:09:00+08:00" content="2016-11-13">
+              2016-11-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C#</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/13/C Sharp/接口/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/13/C Sharp/接口/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/11/13/C Sharp/接口/" class="leancloud_visitors" data-flag-title="接口">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="接口："><a href="#接口：" class="headerlink" title="接口："></a>接口：</h3><pre><code>指定一组函数成员而不实现它们，是一种引用类型。只能类和结构来实现接口。
+</code></pre><h4 id="最直观的体现："><a href="#最直观的体现：" class="headerlink" title="最直观的体现："></a>最直观的体现：</h4><pre><code>我定义了一个函数，参数是类A，所以，理所当然，函数的功能类A可以实现，而当我们传入类B时，就不能实现了。而在这个时候，如果我们定义函数时，用的参数时一个接口的引用IO,只要类A和类B都实现了接口IO,那么这个函数就能实现这两个类的功能。
+</code></pre><h4 id="接口是引用类型："><a href="#接口是引用类型：" class="headerlink" title="接口是引用类型："></a>接口是引用类型：</h4><pre><code>我们不能直接通过类对象的成员访问接口，我们可以通过强制转换类型来获取指向接口的引用。有了引用，就可以使用接口引用来调用方法了。
+</code></pre><h4 id="as运算符："><a href="#as运算符：" class="headerlink" title="as运算符："></a>as运算符：</h4><pre><code>通过as运算符，可以很好的获取接口的引用。
+IO io = A as IO
+如果类A继承接口，则io != null,否则 io == null,所以as有两个步骤：1.转换。 2.检测。
+</code></pre><h4 id="实现多个接口："><a href="#实现多个接口：" class="headerlink" title="实现多个接口："></a>实现多个接口：</h4><pre><code>原来一样，实现对应的定义即可。
+</code></pre><h4 id="实现有重复成员的接口："><a href="#实现有重复成员的接口：" class="headerlink" title="实现有重复成员的接口："></a>实现有重复成员的接口：</h4><pre><code>完全相同的成员，在类中实现一个即可。
+</code></pre><h4 id="多个接口的引用："><a href="#多个接口的引用：" class="headerlink" title="多个接口的引用："></a>多个接口的引用：</h4><pre><code>用as获取单个接口的引用。
+</code></pre><h4 id="接口可以继承接口："><a href="#接口可以继承接口：" class="headerlink" title="接口可以继承接口："></a>接口可以继承接口：</h4><pre><code>继承该接口的类，同样要实现所有接口成员。
+</code></pre><h4 id="基类继承并实现了接口，派生成员也可引用"><a href="#基类继承并实现了接口，派生成员也可引用" class="headerlink" title="基类继承并实现了接口，派生成员也可引用"></a>基类继承并实现了接口，派生成员也可引用</h4>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/18/Design Mode/The MVC Design Mode/" itemprop="url">
                   MVC Design Mode
                 </a>
@@ -688,7 +826,7 @@ var _hmt = _hmt || [];
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -696,7 +834,7 @@ var _hmt = _hmt || [];
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -705,7 +843,7 @@ var _hmt = _hmt || [];
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
