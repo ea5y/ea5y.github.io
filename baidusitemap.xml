@@ -3,6 +3,8 @@
 
 
     
+    
+    
   <url>
     <loc>https://ea5y.github.io/2016/11/13/C%20Sharp/IEnumerator/</loc>
     <lastmod>2016-11-13T15:11:41.990Z</lastmod>
@@ -71,15 +73,19 @@
     
   <url>
     <loc>https://ea5y.github.io/2016/10/18/Design%20Mode/The%20MVC%20Design%20Mode/</loc>
-    <lastmod>2016-11-13T13:43:28.730Z</lastmod>
+    <lastmod>2016-10-20T14:28:17.728Z</lastmod>
     <data>
         <display>
         <title>MVC Design Mode</title>
         <pubTime>2016-10-18T13:46:00.000Z</pubTime>
         
-        <tag>test</tag>
+        <tag>C#</tag>
          
-        <tag>sss</tag>
+        <tag>MVC</tag>
+         
+        <tag>Design Mode</tag>
+         
+        <tag>Unity</tag>
          
          
            
@@ -93,15 +99,21 @@
     
   <url>
     <loc>https://ea5y.github.io/2016/10/17/C%20Sharp/How%20to%20use%20the%20generic%20paradigm%20of%20EventHandler/</loc>
-    <lastmod>2016-11-13T13:43:06.322Z</lastmod>
+    <lastmod>2016-10-17T16:18:21.443Z</lastmod>
     <data>
         <display>
         <title>How to use the EventHandler<T></title>
         <pubTime>2016-10-17T14:44:00.000Z</pubTime>
         
-        <tag>test1</tag>
+        <tag>C#</tag>
          
-        <tag>test2</tag>
+        <tag>EventHandler&lt;T&gt;</tag>
+         
+        <tag>generic paradigm</tag>
+         
+        <tag>Event</tag>
+         
+        <tag>delegate</tag>
          
          
            
@@ -112,6 +124,4 @@
     </data>
     </url>
 
-    
-    
 </urlset>
