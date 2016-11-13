@@ -5,17 +5,17 @@
     
   <url>
     <loc>https://ea5y.github.io/2016/10/18/Design%20Mode/The%20MVC%20Design%20Mode/</loc>
-    <lastmod>2016-10-20T14:28:17.728Z</lastmod>
+    <lastmod>2016-11-13T12:36:54.226Z</lastmod>
     <data>
         <display>
         <title>MVC Design Mode</title>
         <pubTime>2016-10-18T13:46:00.000Z</pubTime>
         
+        <tag>C#</tag>
+         
         <tag>MVC</tag>
          
         <tag>Design Mode</tag>
-         
-        <tag>C#</tag>
          
         <tag>Unity</tag>
          
@@ -37,9 +37,9 @@
         <title>How to use the EventHandler<T></title>
         <pubTime>2016-10-17T14:44:00.000Z</pubTime>
         
-        <tag>C#</tag>
-         
         <tag>EventHandler&lt;T&gt;</tag>
+         
+        <tag>C#</tag>
          
         <tag>generic paradigm</tag>
          
