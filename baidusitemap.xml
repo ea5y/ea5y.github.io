@@ -4,18 +4,36 @@
 
     
   <url>
+    <loc>https://ea5y.github.io/2016/10/18/DesignMode/The%20MVC%20Design%20Mode/</loc>
+    <lastmod>2016-11-13T12:53:57.019Z</lastmod>
+    <data>
+        <display>
+        <title>MVC Design Mode</title>
+        <pubTime>2016-10-18T13:46:00.000Z</pubTime>
+        
+        <tag>MVC</tag>
+         
+        <tag>Unity</tag>
+         
+         
+           
+             
+              <breadCrumb title="Design Mode" url="https://ea5y.github.io/categories/Design-Mode/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://ea5y.github.io/2016/10/17/CSharp/How%20to%20use%20the%20generic%20paradigm%20of%20EventHandler/</loc>
-    <lastmod>2016-11-13T12:50:32.553Z</lastmod>
+    <lastmod>2016-11-13T12:53:40.423Z</lastmod>
     <data>
         <display>
         <title>How to use the EventHandler<T></title>
         <pubTime>2016-10-17T14:44:00.000Z</pubTime>
         
         <tag>EventHandler&lt;T&gt;</tag>
-         
-        <tag>C Sharp</tag>
-         
-        <tag>generic paradigm</tag>
          
         <tag>Event</tag>
          
@@ -25,32 +43,6 @@
            
              
               <breadCrumb title="C Sharp" url="https://ea5y.github.io/categories/C-Sharp/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://ea5y.github.io/2016/10/18/DesignMode/The%20MVC%20Design%20Mode/</loc>
-    <lastmod>2016-11-13T12:41:52.404Z</lastmod>
-    <data>
-        <display>
-        <title>MVC Design Mode</title>
-        <pubTime>2016-10-18T13:46:00.000Z</pubTime>
-        
-        <tag>C Sharp</tag>
-         
-        <tag>MVC</tag>
-         
-        <tag>Design Mode</tag>
-         
-        <tag>Unity</tag>
-         
-         
-           
-             
-              <breadCrumb title="Design Mode" url="https://ea5y.github.io/categories/Design-Mode/"/>
           
         </display>
     </data>
