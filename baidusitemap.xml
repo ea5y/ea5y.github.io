@@ -5,15 +5,15 @@
     
   <url>
     <loc>http://ea5y.coding.me/2016/10/17/C%20Sharp/How%20to%20use%20the%20generic%20paradigm%20of%20EventHandler/</loc>
-    <lastmod>2016-11-14T16:28:33.144Z</lastmod>
+    <lastmod>2016-11-14T16:36:53.492Z</lastmod>
     <data>
         <display>
         <title>How to use the EventHandler&lt;T&gt;</title>
         <pubTime>2016-10-17T14:44:00.000Z</pubTime>
         
-        <tag>EventHandler&lt;T&gt;</tag>
-         
         <tag>C#</tag>
+         
+        <tag>EventHandler&lt;T&gt;</tag>
          
         <tag>generic paradigm</tag>
          
@@ -65,9 +65,9 @@
         <title>接口</title>
         <pubTime>2016-11-13T14:09:00.000Z</pubTime>
         
-        <tag>C#</tag>
-         
         <tag>接口</tag>
+         
+        <tag>C#</tag>
          
          
            
