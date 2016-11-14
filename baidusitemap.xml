@@ -6,7 +6,7 @@
     
     
   <url>
-    <loc>https://ea5y.github.io/2016/11/13/C%20Sharp/IEnumerator/</loc>
+    <loc>http://ea5y.coding.me/2016/11/13/C%20Sharp/IEnumerator/</loc>
     <lastmod>2016-11-13T15:11:41.990Z</lastmod>
     <data>
         <display>
@@ -22,7 +22,7 @@
          
            
              
-              <breadCrumb title="C#" url="https://ea5y.github.io/categories/C/"/>
+              <breadCrumb title="C#" url="http://ea5y.coding.me/categories/C/"/>
           
         </display>
     </data>
@@ -30,7 +30,7 @@
 
     
   <url>
-    <loc>https://ea5y.github.io/2016/11/13/C%20Sharp/%E6%8E%A5%E5%8F%A3/</loc>
+    <loc>http://ea5y.coding.me/2016/11/13/C%20Sharp/%E6%8E%A5%E5%8F%A3/</loc>
     <lastmod>2016-11-13T14:29:26.127Z</lastmod>
     <data>
         <display>
@@ -44,7 +44,7 @@
          
            
              
-              <breadCrumb title="C#" url="https://ea5y.github.io/categories/C/"/>
+              <breadCrumb title="C#" url="http://ea5y.coding.me/categories/C/"/>
           
         </display>
     </data>
@@ -52,7 +52,7 @@
 
     
   <url>
-    <loc>https://ea5y.github.io/2016/10/16/Informal%20essay/blog1/</loc>
+    <loc>http://ea5y.coding.me/2016/10/16/Informal%20essay/blog1/</loc>
     <lastmod>2016-11-13T13:43:51.007Z</lastmod>
     <data>
         <display>
@@ -64,7 +64,7 @@
          
            
              
-              <breadCrumb title="Informal essay" url="https://ea5y.github.io/categories/Informal-essay/"/>
+              <breadCrumb title="Informal essay" url="http://ea5y.coding.me/categories/Informal-essay/"/>
           
         </display>
     </data>
@@ -72,7 +72,7 @@
 
     
   <url>
-    <loc>https://ea5y.github.io/2016/10/18/Design%20Mode/The%20MVC%20Design%20Mode/</loc>
+    <loc>http://ea5y.coding.me/2016/10/18/Design%20Mode/The%20MVC%20Design%20Mode/</loc>
     <lastmod>2016-10-20T14:28:17.728Z</lastmod>
     <data>
         <display>
@@ -90,7 +90,7 @@
          
            
              
-              <breadCrumb title="Design Mode" url="https://ea5y.github.io/categories/Design-Mode/"/>
+              <breadCrumb title="Design Mode" url="http://ea5y.coding.me/categories/Design-Mode/"/>
           
         </display>
     </data>
@@ -98,16 +98,16 @@
 
     
   <url>
-    <loc>https://ea5y.github.io/2016/10/17/C%20Sharp/How%20to%20use%20the%20generic%20paradigm%20of%20EventHandler/</loc>
+    <loc>http://ea5y.coding.me/2016/10/17/C%20Sharp/How%20to%20use%20the%20generic%20paradigm%20of%20EventHandler/</loc>
     <lastmod>2016-10-17T16:18:21.443Z</lastmod>
     <data>
         <display>
         <title>How to use the EventHandler<T></title>
         <pubTime>2016-10-17T14:44:00.000Z</pubTime>
         
-        <tag>C#</tag>
-         
         <tag>EventHandler&lt;T&gt;</tag>
+         
+        <tag>C#</tag>
          
         <tag>generic paradigm</tag>
          
@@ -118,7 +118,7 @@
          
            
              
-              <breadCrumb title="C Sharp" url="https://ea5y.github.io/categories/C-Sharp/"/>
+              <breadCrumb title="C Sharp" url="http://ea5y.coding.me/categories/C-Sharp/"/>
           
         </display>
     </data>
