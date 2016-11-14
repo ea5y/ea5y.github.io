@@ -3,6 +3,34 @@
 
 
     
+  <url>
+    <loc>http://ea5y.coding.me/2016/10/17/C%20Sharp/How%20to%20use%20the%20generic%20paradigm%20of%20EventHandler/</loc>
+    <lastmod>2016-11-14T16:16:02.689Z</lastmod>
+    <data>
+        <display>
+        <title>How to use the EventHandler</title>
+        <pubTime>2016-10-17T14:44:00.000Z</pubTime>
+        
+        <tag>EventHandler&lt;T&gt;</tag>
+         
+        <tag>C#</tag>
+         
+        <tag>generic paradigm</tag>
+         
+        <tag>Event</tag>
+         
+        <tag>delegate</tag>
+         
+         
+           
+             
+              <breadCrumb title="C Sharp" url="http://ea5y.coding.me/categories/C-Sharp/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
     
   <url>
@@ -91,34 +119,6 @@
            
              
               <breadCrumb title="Design Mode" url="http://ea5y.coding.me/categories/Design-Mode/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ea5y.coding.me/2016/10/17/C%20Sharp/How%20to%20use%20the%20generic%20paradigm%20of%20EventHandler/</loc>
-    <lastmod>2016-10-17T16:18:21.443Z</lastmod>
-    <data>
-        <display>
-        <title>How to use the EventHandler<T></title>
-        <pubTime>2016-10-17T14:44:00.000Z</pubTime>
-        
-        <tag>C#</tag>
-         
-        <tag>EventHandler&lt;T&gt;</tag>
-         
-        <tag>generic paradigm</tag>
-         
-        <tag>Event</tag>
-         
-        <tag>delegate</tag>
-         
-         
-           
-             
-              <breadCrumb title="C Sharp" url="http://ea5y.coding.me/categories/C-Sharp/"/>
           
         </display>
     </data>

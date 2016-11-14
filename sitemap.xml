@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ea5y.coding.me/2016/10/17/C%20Sharp/How%20to%20use%20the%20generic%20paradigm%20of%20EventHandler/</loc>
+    
+    <lastmod>2016-11-14T16:16:02.689Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ea5y.coding.me/tags/index.html</loc>
     
     <lastmod>2016-11-13T16:01:03.559Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>http://ea5y.coding.me/2016/10/18/Design%20Mode/The%20MVC%20Design%20Mode/</loc>
     
     <lastmod>2016-10-20T14:28:17.728Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ea5y.coding.me/2016/10/17/C%20Sharp/How%20to%20use%20the%20generic%20paradigm%20of%20EventHandler/</loc>
-    
-    <lastmod>2016-10-17T16:18:21.443Z</lastmod>
     
   </url>
   
